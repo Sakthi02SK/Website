@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(to bottom, #000000, #FFFFFF);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rgform{
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 10px #747171;
+}
+.rgform h1{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.rgdetail{
+    padding: 25px;
+}
+input[type="text"], input[type="password"] {
+    margin: 0 0 10px 0;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+button{
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #867e7e;
+    color: black;
+}
+button:active{
+    color:white;
+    background-color: #333;
+}
+    </style>
+</head>
+<body>
+    <div class="rgform">
+        <h1>Registation</h1>
+        <div class="rgdetail">
+            <label for="rgname">Name:</label>
+            <input autocomplete="off" name="rgname" id="rgname" type="text"><br>
+            <label for="rgusername">Username:</label>
+            <input autocomplete="off" name="rgusername" id="rgusername" type="text"><br>
+            <label for="rgphno">Phone no:</label>
+            <input autocomplete="off" name="rgphno" id="rgphno" type="text"><br>
+            <label for="rgpass">Password:</label>
+            <input name="rgpass" id="rgpass" type="password"><br>
+            <label for="rgcnpass">Confirm Password:</label>
+            <input name="rgcnpass" id="rgcnpass" type="password"><br>
+            <button class="rgbtn" onclick="register()">Register</button>
+            </div>
+    </div>
+    <script src="JS.js"></script>
+</body>
+</html>

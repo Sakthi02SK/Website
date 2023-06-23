@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECG Expenses Tracking System</title>
+    <style>
+      body{
+        background: linear-gradient(145deg,rgb(243, 134, 134),rgb(89, 89, 191));
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2{
+        text-align: center;
+      }
+      form{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      label, input{
+        display: block;
+        margin: 5px;  
+      }
+      button{
+        margin-left: 10px;
+      }
+      table{
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      table th, table td{
+        font-size: 30px;
+        border: 3px solid black;
+        padding: 5px;
+      }
+      #pie-chart {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+      } 
+    </style>
+</head>
+  <body>
+    <h1>Medicine Expenses Tracking System</h1>
+    <form>
+      <label for="expense">Medicine:</label>
+      <input type="text" autocomplete="off" id="expense" name="expense">
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" autocomplete="off" name="amount">
+      <button type="button" onclick="addExpense()">Add Expense</button>
+    </form>
+    <h2>Medicines List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Medicines</th>
+          <th>Amount(in ₹)</th>
+        </tr>
+      </thead>
+      <tbody id="expenses-table">
+      </tbody>
+    </table>
+    <h2>Expenses Chart</h2>
+    <canvas id="pie-chart"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JS.js"></script>
+  </body>
+</html>

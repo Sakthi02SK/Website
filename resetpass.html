@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(to bottom, #000000, #FFFFFF);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rtform{
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 10px #747171;
+}
+.rtform h1{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.rtdetail{
+    padding: 25px;
+}
+input[type="text"], input[type="password"] {
+    margin: 0 0 10px 0;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.rtbtn{
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.rtbtn:hover {
+    background-color: #867e7e;
+    color: black;
+}
+.rtbtn:active{
+    color:white;
+    background-color: #333;
+}
+    </style>
+</head>
+<body>
+    <div class="rtform">
+        <h1>Reset Password</h1>
+        <div class="rtdetail">
+        <label for="rtusername">Username:</label>
+        <input autocomplete="off" name="rtusername" id="rtusername" type="text"><br>
+        <label for="rtphno">Phone no:</label>
+        <input autocomplete="off" placeholder="Last 4 digit" name="rtphno" id="rtphno" type="text"><br>
+        <label for="rtpass">New Password:</label>
+        <input name="rtpass" id="rtpass" type="password"><br>
+        <label for="rtcnpass">Confirm Password:</label>
+        <input name="rtcnpass" id="rtcnpass" type="password"><br>
+        <button class="rtbtn" onclick="resetPassword()">Submit</button>
+        </div>
+    </div>
+    <script src="JS.js"></script>
+</body>
+</html>
